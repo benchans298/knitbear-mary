@@ -1,34 +1,73 @@
-<head>
+{{ if isset .Site.Params "favicon" }}
+<link href="{{ .Site.Params.favicon }}" rel="shortcut icon" type="image/x-icon" />
+{{ end }}
 
-  <title>{{ .Title }} | {{ $.Site.Title }}</title>
+{{ if eq .Type "posts" }}
+<!-- Page Author & Description -->
+<meta name="author" content="{{ if isset .Params "author" }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }}" />
+<meta name="description" content="{{ .Summary | plainify }}" />
+{{ else }}
+<!-- Site Author & Description -->
+<meta name="author" content="{{ .Site.Params.author }}" />
+<meta name="description" content="{{ .Site.Params.description }}" />
+{{ end }}
 
-  {{ $stylesheet := .Site.Data.webpack.main }}
-  {{ with $stylesheet.css }}
-    <link href="{{ relURL . }}" rel="stylesheet">
+<!-- Site Generator -->
+{{ hugo.Generator }}
+
+<link rel="canonical" href="{{ .Permalink }}" />
+
+<!-- Open Graph -->
+{{ template "_internal/opengraph.html" . }}
+
+<!-- Twitter Cards -->
+{{ template "_internal/twitter_cards.html" . }}
+
+<link rel="stylesheet" href="{{ "/css/semantic.min.css" | relURL }}" />
+<link rel="stylesheet" href="{{ "/css/icomoon.css" | relURL }}" />
+<link rel="stylesheet" href="{{ "/css/OverlayScrollbars.min.css" | relURL }}" />
+<link rel="stylesheet" href="{{ "/css/github-markdown.css" | relURL }}" />
+<link rel="stylesheet" href="{{ "/css/site.css" | relURL }}" />
+
+<style>
+  a:not(.ui.button):hover {
+    text-decoration: underline;
+  }
+
+  {{ if .Site.Params.linkColor }}
+  a:not(.ui.button) {
+    color: {{ .Site.Params.linkColor }} !important;
+  }
   {{ end }}
 
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <base href="{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}">
-
-	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
-
-	<!-- Favicons -->
-	<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
-	<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
-	<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
-	<link rel="manifest" href="/manifest.json">
-	<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ff4400">
-	<meta name="theme-color" content="#fff">
-
-	<!-- Open Graph -->
-	<meta property="og:type" content="business.business">
-	<meta property="og:title" content="Kaldi | Great coffee with a conscience">
-	<meta property="og:url" content="/">
-	<meta property="og:image" content="/img/og-image.jpg">
-
-  {{ if .IsHome }}
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  {{ if .Site.Params.darkLinkColor }}
+  .inverted a:not(.ui.button),
+  .inverted a:not(.ui.button):hover {
+     color: {{ .Site.Params.darkLinkColor }} !important;
+  }
   {{ end }}
-</head>
+
+  {{ if or .Site.Params.background .Site.Params.backgroundImage }}
+  body.default {
+    {{ if .Site.Params.background }}
+    background-color: {{ .Site.Params.background }};
+    {{ end }}
+
+    {{ if .Site.Params.backgroundImage }}
+    background-image: url({{ .Site.Params.backgroundImage }});
+    {{ end }}
+  }
+  {{ end }}
+
+  {{ if or .Site.Params.backgroundDark .Site.Params.backgroundImageDark }}
+  body.dark {
+    {{ if .Site.Params.backgroundDark }}
+    background-color: {{ .Site.Params.backgroundDark }};
+    {{ end }}
+
+    {{ if .Site.Params.backgroundImageDark }}
+    background-image: url({{ .Site.Params.backgroundImageDark }});
+    {{ end }}
+  }
+  {{ end }}
+</style>
