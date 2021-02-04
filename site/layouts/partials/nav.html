@@ -1,19 +1,24 @@
-<nav class="overflow-x-scroll overflow-x-visible-ns flex justify-between items-center center bg-white divider-grey relative">
-
-	<!-- Logo -->
-	<a href="/" class="pa3 db mr4 h-100 w3 flex-none">
-		<img src="/img/logo.svg" alt="Kaldi logo" class="br0 db mb0 w-100"/>
-	</a>
-
-	<!-- Primary Nav -->
-	<ul class="flex b grey-3">
-		<li><a href="/products" class="pa3 no-underline db">Products</a></li>
-
-		<li><a href="/values" class="pa3 no-underline db">Values</a></li>
-
-		<li><a href="/post" class="pa3 no-underline db">Blog</a></li>
-
-		<li><a href="/contact" class="pa3 no-underline db">Contact</a></li>
-	</ul>
-
+{{ if or .Site.Params.backgroundDark .Site.Params.backgroundImageDark }}
+<nav class="ui secondary menu dream-menu">
+{{ else if .Site.Params.darkNav }}
+<nav class="ui secondary inverted menu dream-menu">
+{{ else }}
+<nav class="ui secondary menu dream-menu">
+{{ end }}
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="{{ i18n "flip" }}"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="{{ i18n "home" }}" onclick="window.location.href = '{{ .Site.BaseURL }}'"></i>
+  </div>
+  {{ if or .Site.Params.backgroundDark .Site.Params.backgroundImageDark }}
+  <div class="item">
+    <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
+  </div>
+  {{ end }}
+  {{ if .Site.Params.enableSearch }}
+  <div class="item">
+    <i class="large link search icon" onclick="toggleSearch()"></i>
+  </div>
+  {{ end }}
 </nav>
