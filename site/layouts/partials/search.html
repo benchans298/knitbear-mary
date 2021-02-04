@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="ui inverted segment" id="dream-search">
   <div class="ui search">
     <div class="ui transparent input">
@@ -18,3 +19,25 @@
   })
 </script>
 <script src="{{ "/js/search.js" | relURL }}"></script>
+=======
+<div class="ui inverted segment" id="dream-search">
+  <div class="ui search">
+    <div class="ui transparent input">
+      <input class="prompt" type="text" placeholder="{{ i18n "search" }}" />
+    </div>
+    <div class="results"></div>
+  </div>
+</div>
+<script>
+  $(document).ready(function () {
+    $.getJSON('{{ .Site.BaseURL }}/index.json', function (data) {
+      $('.ui.search').search({
+        source: data,
+        searchFields: ['title'],
+        showNoResults: true,
+      })
+    })
+  })
+</script>
+<script src="{{ "/js/search.js" | relURL }}"></script>
+>>>>>>> 9b75c24a6295622f765c48a65001a47e4ef37f3c
