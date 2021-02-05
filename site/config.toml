@@ -1,10 +1,10 @@
 baseurl = "https://example.com"
 languageCode = "ja-jp"
 defaultContentLanguage = "jp"
-title = "Hugo Theme Dreamタイトル"
+title = "Knit Bear Mary"
 theme = "dream"
 
-# copyright = "コピーライト"
+# copyright = "Mary Satoh"
 
 # googleAnalytics = ""
 
@@ -25,7 +25,7 @@ theme = "dream"
   # darkNav = true
   # dark404 = true
 
-  author = "Yue Yang"
+  author = "Mary Satoh"
   # description = ""
   avatar = "/img/avatar.jpg"
   # headerTitle = ""
