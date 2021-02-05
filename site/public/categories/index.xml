@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Hugo Theme Dreamタイトル</title>
+    <link>https://example.com/categories/</link>
+    <description>Recent content in Categories on Hugo Theme Dreamタイトル</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Thu, 04 Feb 2021 15:38:57 +0900</lastBuildDate><atom:link href="https://example.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>category1</title>
+      <link>https://example.com/categories/category1/</link>
+      <pubDate>Thu, 04 Feb 2021 15:38:57 +0900</pubDate>
+      
+      <guid>https://example.com/categories/category1/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
