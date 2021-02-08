@@ -1,4 +1,4 @@
-baseurl = "https://example.com"
+baseurl = "https://mari-knitbear.netlify.app/"
 languageCode = "ja-jp"
 defaultContentLanguage = "jp"
 title = "Knit Bear Mary"
@@ -6,7 +6,7 @@ theme = "dream"
 
 # copyright = "Mary Satoh"
 
-# googleAnalytics = ""
+# googleAnalytics = "code"
 
 # disqusShortname = ""
 
@@ -26,7 +26,11 @@ theme = "dream"
   # dark404 = true
 
   author = "Mary Satoh"
+<<<<<<< Updated upstream
   # description = ""
+=======
+  # description = "Bear"
+>>>>>>> Stashed changes
   avatar = "/img/avatar.jpg"
   # headerTitle = ""
   motto = "Motto"
@@ -43,7 +47,7 @@ theme = "dream"
   # LEANCLOUD_APP_ID = ""
   # LEANCLOUD_APP_KEY = ""
 
-  email = "aaaabbbcccc@gmail.com"
+  email = "aaaabbbcccc@agmail.com"
   # twitter = ""
   # facebook = ""
   # instagram = ""
