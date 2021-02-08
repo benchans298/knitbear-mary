@@ -1,15 +1,6 @@
-<<<<<<< HEAD
 {{ $search := newScratch }}
 {{ $search.Add "index" slice }}
 {{ range .Site.RegularPages }}
     {{ $search.Add "index" (dict "title" .Title "url" .Permalink  "categories" .Params.categories "tags" .Params.tags "description" .Summary ) }}
 {{ end }}
 {{ $search.Get "index" | jsonify }}
-=======
-{{ $search := newScratch }}
-{{ $search.Add "index" slice }}
-{{ range .Site.RegularPages }}
-    {{ $search.Add "index" (dict "title" .Title "url" .Permalink  "categories" .Params.categories "tags" .Params.tags "description" .Summary ) }}
-{{ end }}
-{{ $search.Get "index" | jsonify }}
->>>>>>> 9b75c24a6295622f765c48a65001a47e4ef37f3c
