@@ -8,7 +8,7 @@ cover: /img/cover.jpg
 categories:
   - category1
 tags:
-  - tag1
+  - たぐ1
   - tag2
 ---
 サマリー
