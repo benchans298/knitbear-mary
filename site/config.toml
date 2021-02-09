@@ -26,11 +26,7 @@ theme = "dream"
   # dark404 = true
 
   author = "Mary Satoh"
-<<<<<<< Updated upstream
-  # description = ""
-=======
-  # description = "Bear"
->>>>>>> Stashed changes
+  description = "Bear"
   avatar = "/img/avatar.jpg"
   # headerTitle = ""
   motto = "Motto"
