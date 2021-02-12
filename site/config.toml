@@ -12,9 +12,11 @@ theme = "dream"
 
 # enableRobotsTXT = true
 
+# hasCJKLanguage = true
+
 [params]
-  background = "#f7f7f7"
-  # backgroundImage = "/me/background.jpg"
+  background = "#d4ffca"
+  backgroundImage = "/img/background.png"
   linkColor = "seagreen"
 
   # dark mode
@@ -28,12 +30,12 @@ theme = "dream"
   author = "Mary Satoh"
   description = "Bear"
   avatar = "/img/avatar.jpg"
-  # headerTitle = ""
-  motto = "Motto"
+  headerTitle = "すてきなものたち"
+  motto = "気に入っているすてきなもの、かぎ針や裁縫による自分の作品"
   # categoriesLimitInHeader = 6 # deprecated
-  # headerBottomText = "" # deprecated
+  headerBottomText = "サイトの説明などを入れられます" # deprecated
 
-  # footerBottomText = ""
+  footerBottomText = "サイトの説明などを入れられます"
 
   # rss = true
 
@@ -55,7 +57,7 @@ theme = "dream"
 
   siteStartYear = 2021
 
-  # favicon = "/favicon.ico"
+  favicon = "/favicon.ico"
 
   # highlightjs = true
   # highlightjsCDN = "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"
@@ -70,6 +72,6 @@ theme = "dream"
   # showSummaryCoverInPost = true
   # hasTwitterEmbed = true
 
-  # [params.advanced]
-  #   customCSS = ["css/custom.css"]
+  [params.advanced]
+    customCSS = ["css/custom.css"]
   #   customJS = []
