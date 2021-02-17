@@ -16,7 +16,7 @@ theme = "dream"
 
 [params]
   background = "#d4ffca"
-  backgroundImage = "/img/background.png"
+  # backgroundImage = "/img/background.png"
   linkColor = "seagreen"
 
   # dark mode
