@@ -1,6 +1,6 @@
 baseurl = "https://mari-knitbear.netlify.app/"
 languageCode = "ja-jp"
-defaultContentLanguage = "jp"
+defaultContentLanguage = "en"
 title = "Knit Bear Mary"
 theme = "dream"
 
