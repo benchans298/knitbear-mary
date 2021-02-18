@@ -4,9 +4,9 @@ defaultContentLanguage = "en"
 title = "Knit Bear Mary"
 theme = "dream"
 
-# copyright = "Mary Satoh"
+copyright = "Mary Satoh"
 
-# googleAnalytics = "code"
+# googleAnalytics = ""
 
 # disqusShortname = ""
 
@@ -45,7 +45,7 @@ theme = "dream"
   # LEANCLOUD_APP_ID = ""
   # LEANCLOUD_APP_KEY = ""
 
-  email = "aaaabbbcccc@agmail.com"
+  email = "satohmary@gmail.com"
   # twitter = ""
   # facebook = ""
   # instagram = ""
